@@ -1,0 +1,44 @@
+//*****************************************************
+//*   ABOUT PAGE
+//*****************************************************
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.about-bgImg-container {
+  @include mixins.bgImg(50vh, variables.$pathname1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .about__bio-image {
+    // border: 2px solid red;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+  }
+}
+
+.about {
+  //   border: 2px solid red;
+  width: 70%;
+  margin: 2rem auto;
+
+  .about__job {
+    // border: 2px solid red;
+    margin: 1rem;
+    background-color: lighten(variables.$primary-color, 10%);
+    padding: 1rem;
+    border-bottom: 5px solid variables.$secondary-color;
+    border-radius: 5px;
+    h2,h3{
+        margin: 0.5rem 0;
+    }
+    h6{
+        margin: 0.3rem 0;
+    }
+  }
+}
